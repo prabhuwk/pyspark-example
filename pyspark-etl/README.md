@@ -1,4 +1,7 @@
-# Read the word count from documentation and write to postgresql database
+# Read the word count from text file and write to postgresql database
+
+![pyspark etl](pyspark-etl.png)
+
 After executing `etl.py` we can see results in postgresql database 
 ```
 $ psql -h localhost -U prabhu -d pyspark
@@ -12,7 +15,7 @@ pyspark=# SELECT count(*) FROM documentation.word_count;
 pyspark=#
 ```
 
-#### Invoking pyspark from commandline and connecting to postgresql database 
+#### Invoking pyspark from command line and connecting to postgresql database 
 Prerequisites: JDBC driver for postgresql database need to be downloaded from this [link](https://jdbc.postgresql.org)
 ```
 $ pyspark --jars pyspark-etl/postgresql-42.6.0.jar
