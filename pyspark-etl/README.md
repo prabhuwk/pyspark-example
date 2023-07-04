@@ -1,4 +1,4 @@
-# Read the word count from text file and write to postgresql database
+# Read text file, count words and write to database
 
 ![pyspark etl](pyspark-etl.png)
 
