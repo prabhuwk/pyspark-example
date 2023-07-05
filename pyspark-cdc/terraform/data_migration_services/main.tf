@@ -47,7 +47,7 @@ resource "aws_dms_replication_instance" "aaj_dms" {
   replication_instance_class   = "dms.t3.micro"
   replication_instance_id      = "aaj-dms-replication-instance-01"
   replication_subnet_group_id  = aws_dms_replication_subnet_group.aaj_dms_subnet_group.id
-  vpc_security_group_ids       = aws_security_group.dms.id
+  vpc_security_group_ids       = [aws_security_group.dms.id]
 
   depends_on = [aws_security_group.dms, aws_dms_replication_subnet_group.aaj_dms_subnet_group]
 }
