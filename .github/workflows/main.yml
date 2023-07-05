@@ -28,3 +28,11 @@ jobs:
     - name: Terraform Plan
       run: terraform plan -input=false
       working-directory: "pyspark-cdc/terraform/postgres_rds"
+
+    - name: Terraform Init
+      run: terraform init -input=false
+      working-directory: "pyspark-cdc/terraform/s3_bucket"
+    
+    - name: Terraform Plan
+      run: terraform plan -input=false
+      working-directory: "pyspark-cdc/terraform/s3_bucket"
