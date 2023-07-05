@@ -5,7 +5,7 @@ provider "aws" {
 terraform {
   backend "s3" {
     bucket = "aaj-terraform-backend-s3"
-    key    = "postgres_rds"
+    key    = "terraform-state/postgres_rds"
     region = "eu-west-1"
   }
 }
